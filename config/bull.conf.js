@@ -7,6 +7,9 @@ const PORT = process.env.REDIS_PORT
 const QUEUE_NAME = 'miniload-record-data'
 const PREFIX = 'miniload'
 const connection = { host: HOST, port: PORT }
+
+export let jobs = []
+
 const miniloadQueue = new Queue(
     QUEUE_NAME,
     {

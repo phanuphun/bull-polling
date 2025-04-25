@@ -18,7 +18,6 @@ const worker = new Worker(
     QUEUE_NAME,
     async (job) => {
         const { srm, nodeId } = job.data;
-        console.log()
         const value = await readOPC(nodeId)
         await OpcValue.create({ node: `LINE0${nodeId}-MP`, value: `D0328:${value}` });
         console.log(`RAW DATA : ${nodeId}(${srm}) , READING VALUE: ${value}`)
@@ -27,7 +26,7 @@ const worker = new Worker(
     {
         connection,
         prefix: PREFIX,
-        concurrency: 50
+        concurrency: 50,
     },
 );
 

@@ -1,0 +1,7 @@
+``` bash
+PORT = 
+OPC_URL =
+MONGO_CONN_STR = 
+REDIS_HOST = 
+REDIS_PORT = 
+```
