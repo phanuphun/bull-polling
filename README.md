@@ -154,23 +154,3 @@ docker build -t bull-polling-app .
 # Run container
 docker run -p 3333:3333 --env-file .env bull-polling-app
 ```
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **Cannot connect to OPC UA Server**
-   - Check OPC UA Server URL and port
-   - Check firewall settings
-
-2. **Cannot connect to MongoDB**
-   - Check connection string
-   - Check database access permissions
-
-3. **Redis connection error**
-   - Ensure Redis Server is running
-   - Check host and port settings
-
-## 📄 License
-
-ISC License
